@@ -20,8 +20,8 @@ public class EnglishDictionaryTest {
         List<String> defs = dictionary.getDefinition("huntsman");
 
         //then
-        assertEquals("[One who hunts, or who practices hunting., " +
-                        "The person whose office it is to manage the chase or to look after the hounds.]",
+        assertEquals("[One who hunts, or who practices hunting., "
+                        + "The person whose office it is to manage the chase or to look after the hounds.]",
                 defs.toString());
     }
 
