@@ -24,7 +24,7 @@ public class EnglishDictionary {
         CSVReader reader = new CSVReader(new InputStreamReader(in));
         String[] record = null;
 
-        while((record = reader.readNext()) != null) {
+        while ((record = reader.readNext()) != null) {
             //record is one line of the csv
             words.add(record[0]);
             definitions.add(record[2]);
@@ -43,7 +43,7 @@ public class EnglishDictionary {
 
         //check where the word is in the dictionary
         for (int i = 0; i < words.size(); i++) {
-            if(words.get(i).equalsIgnoreCase(word)) {
+            if (words.get(i).equalsIgnoreCase(word)) {
                 indexes.add(i);
             }
         }
@@ -58,15 +58,4 @@ public class EnglishDictionary {
         return definitionsOfSearchedWords;
 
     }
-
-
-    public static void main(String[] args) throws CsvValidationException, IOException {
-        EnglishDictionary dictionary = new EnglishDictionary();
-
-        List<String> defs = dictionary.getDefinition("supercal");
-
-        System.out.println(defs);
-    }
-
-
 }

@@ -1,3 +1,5 @@
+package weizberg.dictionary;
+
 import com.opencsv.exceptions.CsvValidationException;
 import org.junit.jupiter.api.Test;
 import weizberg.dictionary.EnglishDictionary;
@@ -18,7 +20,8 @@ public class EnglishDictionaryTest {
         List<String> defs = dictionary.getDefinition("huntsman");
 
         //then
-        assertEquals("[One who hunts, or who practices hunting., The person whose office it is to manage the chase or to look after the hounds.]",
+        assertEquals("[One who hunts, or who practices hunting., " +
+                        "The person whose office it is to manage the chase or to look after the hounds.]",
                 defs.toString());
     }
 
