@@ -26,9 +26,7 @@ public class EnglishDictionaryTest {
         expected.add("One who hunts, or who practices hunting.");
         expected.add("The person whose office it is to manage the chase or to look after the hounds.");
 
-        for (int i = 0; i < defs.size(); i++) {
-            assertEquals(expected.get(i), defs.get(i));
-        }
+        assertEquals(expected, defs);
     }
 
     @Test

@@ -13,8 +13,8 @@ import java.util.List;
  * reads the english dictionary file once (put it in the constructor)
  */
 public class EnglishDictionary {
-    ArrayList<String> words = new ArrayList<>();
-    ArrayList<String> definitions = new ArrayList<>();
+    private ArrayList<String> words = new ArrayList<>();
+    private ArrayList<String> definitions = new ArrayList<>();
 
     public EnglishDictionary() throws CsvValidationException, IOException {
         //gets the file from the resources directory
@@ -38,15 +38,14 @@ public class EnglishDictionary {
      * @return a list of definitions or an empty list if the word doesn't exist
      */
     public List<String> getDefinition(String word) {
-        ArrayList<Integer> indexes = new ArrayList<>();
-        List<String> definitionsOfSearchedWords = new ArrayList<>();
+        List<String> defsOfWord = new ArrayList<>();
 
         for (int i = 0; i < words.size(); i++) {
             if (words.get(i).equalsIgnoreCase(word)) {
-                definitionsOfSearchedWords.add(definitions.get(i));
+                defsOfWord.add(definitions.get(i));
             }
         }
-        return definitionsOfSearchedWords;
+        return defsOfWord;
 
     }
 }
