@@ -5,9 +5,11 @@ import org.junit.jupiter.api.Test;
 import weizberg.dictionary.EnglishDictionary;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EnglishDictionaryTest {
 
@@ -20,9 +22,13 @@ public class EnglishDictionaryTest {
         List<String> defs = dictionary.getDefinition("huntsman");
 
         //then
-        assertEquals("[One who hunts, or who practices hunting., "
-                        + "The person whose office it is to manage the chase or to look after the hounds.]",
-                defs.toString());
+        List<String> expected = new ArrayList<>();
+        expected.add("One who hunts, or who practices hunting.");
+        expected.add("The person whose office it is to manage the chase or to look after the hounds.");
+
+        for (int i = 0; i < defs.size(); i++) {
+            assertEquals(expected.get(i), defs.get(i));
+        }
     }
 
     @Test
@@ -34,6 +40,6 @@ public class EnglishDictionaryTest {
         List<String> defs = dictionary.getDefinition("supercal");
 
         //then
-        assertEquals("[]", defs.toString());
+        assertTrue(defs.isEmpty());
     }
 }

@@ -41,20 +41,11 @@ public class EnglishDictionary {
         ArrayList<Integer> indexes = new ArrayList<>();
         List<String> definitionsOfSearchedWords = new ArrayList<>();
 
-        //check where the word is in the dictionary
         for (int i = 0; i < words.size(); i++) {
             if (words.get(i).equalsIgnoreCase(word)) {
-                indexes.add(i);
+                definitionsOfSearchedWords.add(definitions.get(i));
             }
         }
-
-        //retrieve the definition form those indexes
-        int index;
-        for (int i = 0; i < indexes.size(); i++) {
-            index = indexes.get(i);
-            definitionsOfSearchedWords.add(definitions.get(index));
-        }
-
         return definitionsOfSearchedWords;
 
     }

@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class EnglishDictionaryFrame extends JFrame {
-    JTextField wordField = new JTextField();
-    JTextArea definitionArea = new JTextArea();
-    EnglishDictionary dictionary = new EnglishDictionary();
+    private JTextField wordField = new JTextField();
+    private JTextArea definitionArea = new JTextArea();
+    private EnglishDictionary dictionary = new EnglishDictionary();
 
     public EnglishDictionaryFrame() throws CsvValidationException, IOException {
         setSize(400, 400);
