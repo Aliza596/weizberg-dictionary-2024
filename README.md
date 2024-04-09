@@ -6,4 +6,4 @@ large database for the definition of the word.
 ![Dictionary](screenshots/dictionary.png)
 
 ### Technology
-[Open CSV](https://github.com/cygri/opencsv/blob/master/src/main/java/com/opencsv/CSVReader.java)
+[Open CSV](https://opencsv.sourceforge.net/project-info.html)
