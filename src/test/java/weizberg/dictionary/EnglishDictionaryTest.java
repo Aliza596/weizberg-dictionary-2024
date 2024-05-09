@@ -19,7 +19,7 @@ public class EnglishDictionaryTest {
         EnglishDictionary dictionary = new EnglishDictionary();
 
         //when
-        List<String> defs = dictionary.getDefinition("huntsman");
+        List<String> defs = dictionary.getDefinition("Huntsman");
 
         //then
         List<String> expected = new ArrayList<>();
